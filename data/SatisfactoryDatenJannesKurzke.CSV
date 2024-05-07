@@ -1,0 +1,42 @@
+Recipe;ProductionTime;Machine;Output1;QuantitiyOut1;RatePerMinOut1;Output2;QuantityOut2;RatePerMinOut2;Input1;QuantityIn1;RateIn1;Input2;QuantityIn2;RateIn2;Input3;QuantityIn3;RateIn3;Input4;QuantityIn4;RateIn4
+Iron Ingot;2;Smelter;Iron Ingot;1;30;;;0;Iron Ore;1;30;;;0;;;0;;;0
+Iron Plate;6;Constructor;Iron Plate;2;20;;;0;Iron Ingot;3;30;;;0;;;0;;;0
+Iron Rod;4;Constructor;Iron Rod;1;15;;;0;Iron Ingot;1;15;;;0;;;0;;;0
+Copper Ingot;2;Smelter;Copper Ingot;1;30;;;0;Copper Ore;1;30;;;0;;;0;;;0
+Copper Ingot;24;Refinery;Copper Ingot;15;37,5;;;0;Copper Ore;6;15;Water;4;10;;;0;;;0
+Wire;4;Constructor;Wire;2;30;;;0;Copper Ingot;1;15;;;0;;;0;;;0
+Cable;2;Constructor;Cable;1;30;;;0;Wire;2;60;;;0;;;0;;;0
+Concrete;4;Constrctor;Concrete;1;15;;;0;Limestone;3;45;;;0;;;0;;;0
+Screw;6;Constructor;Screw;4;40;;;0;Iron Rod;1;10;;;0;;;0;;;0
+Screw;24;Constructor;Screw;20;50;;;0;Iron Ingot;5;12,5;;;0;;;0;;;0
+Reinforced Iron Plate;12;Assembler;Reinforced Iron Plate;1;5;;;0;Iron Plate;6;30;Screw;12;60;;;0;;;0
+Reinforced Iron Plate;12;Assembler;Reinforced Iron Plate;3;15;;;0;Iron Plate;18;90;Screw;50;250;;;0;;;0
+Copper Sheet;6;Constructor;Copper Sheet;1;10;;;0;Copper Ingot;2;20;;;0;;;0;;;0
+Rotor;15;Assembler;Rotor;1;4;;;0;Iron Rod;5;20;Screw;25;100;;;0;;;0
+Rotor;16;Assembler;Rotor;3;11,25;;;0;Copper Sheet;6;22,5;Screw;52;195;;;0;;;0
+Rotor;12;Assembler;Rotor;1;5;;;0;Steel Pipe;2;10;Wire;6;30;;;0;;;0
+Modular Frame;60;Assembler;Modular Frame;2;2;;;0;Reinforced Iron Plate;3;3;Iron Rod;12;12;;;0;;;0
+Steel Ingot;4;Foundry;Steel Ingot;3;45;;;0;Iron Ore;3;45;Coal;3;45;;;0;;;0
+Steel Beam;4;Constructor;Steel Beam;1;15;;;0;Steel Ingot;4;60;;;0;;;0;;;0
+Steel Pipe;6;Constructor;Steel Pipe;2;20;;;0;Steel Ingot;3;30;;;0;;;0;;;0
+Stator;12;Assembler;Stator;1;5;;;0;Steel Pipe;3;15;Wire;8;40;;;0;;;0
+Motor;12;Assembler;Motor;1;5;;;0;Rotor;2;10;Stator;2;10;;;0;;;0
+Caterium Ingot;4;Smelter;Caterium Ingot;1;15;;;0;Caterium Ore;3;45;;;0;;;0;;;0
+Quickwire;5;Constructor;Quickwire;5;60;;;0;Caterium Ingot;1;12;;;0;;;0;;;0
+Circuit Board;8;Assembler;Circuit Board;1;7,5;;;0;Copper Sheet;2;15;Plastic;4;30;;;0;;;0
+Plastic;6;Refinery;Plastic;2;20;;;0;Polymer Resin;6;60;Water;2;20;;;0;;;0
+Plastic;6;Refinery;Plastic;2;20;Heavy Oil Residue;1;10;Crude Oil;3;30;;;0;;;0;;;0
+Polymer Resin;6;Refinery;Polymer Resin;3;30;Fuel;4;40;Crude Oil;6;60;;;0;;;0;;;0
+High-Speed Controller;16;Manufacturer;High-Speed Connector;1;3,75;;;0;Quickwire;56;210;Cable;10;37,5;Circuit Board;1;3,75;;;0
+Encased Industrial Beam;10;Assembler;Encased Industrial Beam;1;6;;;0;Steel Beam;4;24;Concrete;5;30;;;0;;;0
+Heavy Modular Frame;30;Manufacturer;Heavy Modular Frame;1;2;;;0;Modular Frame;5;10;Steel Pipe;15;30;Encased Industrial Beam;5;10;Screw;100;200
+Computer;24;Manufacturer;Computer;1;2,5;;;0;Circuit Board;10;25;Cable;9;22,5;Plastic;18;45;Screw;52;130
+Computer;16;Manufacturer;Computer;1;3,75;;;0;Circuit Board;7;26,25;Quickwire;28;105;Rubber;12;45;;;0
+Rubber;6;Refinery;Rubber;2;20;;;0;Polymer Resin;4;40;Water;4;40;;;0;;;0
+Rubber;6;Refinery;Rubber;2;20;Heavy Oil Residue;2;20;Crude Oil;3;30;;;0;;;0;;;0
+Adaptive Control Unit;120;Manufacturer;Adaptive Control Unit;2;1;;;0;Automated Wiring;15;7,5;Circuit Board;10;5;Heavy Modular Frame;2;1;Computer;2;1
+Smart Plating;30;Assembler;Smart Plating;1;2;;;0;Reinforced Iron Plate;1;2;Rotor;1;2;;;0;;;0
+Modular Engine;60;Manufacturer;Modular Engine;1;1;;;0;Motor;2;2;Rubber;15;15;Smart Plating;2;2;;;0
+Super Computer;32;Manufacturer;Super Computer;1;1,875;;;0;Computer;2;3,75;AI Limiter;2;3,75;High-Speed Connector;3;5,625;Plastic;28;52,5
+Versatile Framework;24;Assembler;Versatile Framework;2;5;;;0;Modular Frame;1;2,5;Steel Beam;12;30;;;0;;;0
+AI Limiter;12;Assembler;AI Limiter;1;5;;;0;Copper Sheet;5;25;Quickwire;20;100;;;0;;;0
