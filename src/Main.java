@@ -8,5 +8,7 @@ public class Main {
             System.out.println(myRow.Recipe + " " + myRow.RatePerMinOut1);
         }
         System.out.println(csvRows.size());
+
+        Aggegator.aggregate(csvRows);
     }
 }
