@@ -4,44 +4,43 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReadCSV {
-    // Generates and returns a list where every element is a row of
-    // the given CSV, the rows haven't yet been seperated
-    // split each string with .split(";")
-    public static ArrayList<String> readCsvToStrList(String path) {
+
+    /*
+     * generates an ArrayList<String> where every element is a row of the CSV
+     * the values are still seperated by ";"
+     * creates the file from the given file path, contains minor error handling
+     */
+    private static ArrayList<String> readCsvToStrList(String path) {
 
         File satisfactoryCSV = new File(path);
         ArrayList<String> stringRows = new ArrayList<>();
+
         try {
-            // Scanner can be used to iterate over every row of a CSV file
-            Scanner csvReadScanner = new Scanner(satisfactoryCSV);
+            Scanner csvReadScanner = new Scanner(satisfactoryCSV); // Scanner can be used to iterate over every row of a
+                                                                   // CSV file
             while (csvReadScanner.hasNext()) {
                 String row = csvReadScanner.nextLine(); // use nextLine if you want to catch "empty" values
                 stringRows.add(row);
             }
             csvReadScanner.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());
         }
         return stringRows;
     }
 
-    /*
-     * Converts a given CSV List to an array containing all the rows
-     * 
-     * @param path to the CSV file
-     * 
-     * @return ArrayList containing all the rows of the CSV
-     */
+    /* Converts the given CSV file to an ArrayList<Row> holding all the CSV rows */
     public static ArrayList<Row> csvToList(String path) {
+
         ArrayList<String> rowStrList = ReadCSV.readCsvToStrList(path);
         ArrayList<Row> rowList = new ArrayList<>();
-        rowStrList.remove(0);
+
         if (!rowStrList.isEmpty()) {
+            rowStrList.remove(0); // removes the head of the CSV
+
             for (String rowStr : rowStrList) {
                 rowList.add(ReadCSV.createRow(rowStr));
             }
-        } else {
-            System.out.println("You fucked up");
         }
         return rowList;
     }
