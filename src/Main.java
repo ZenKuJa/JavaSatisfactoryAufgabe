@@ -9,6 +9,6 @@ public class Main {
         }
         System.out.println(csvRows.size());
 
-        Aggegator.aggregate(csvRows);
+        AggegatorHashMap.aggregate(csvRows);
     }
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Aggegator {
+public class AggegatorHashMap {
     public static ArrayList<AggegatedRow> aggregate(ArrayList<Row> rows) {
 
         ArrayList<AggegatedRow> aggegatedRows = new ArrayList<>();
