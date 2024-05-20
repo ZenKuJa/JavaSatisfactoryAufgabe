@@ -5,44 +5,26 @@ import java.util.Scanner;
 
 public class ReadCSV {
 
-    /*
-     * generates an ArrayList<String> where every element is a row of the CSV
-     * the values are still seperated by ";"
-     * creates the file from the given file path, contains minor error handling
+    /*goes over every line of the csv file and creates for every line the corespoinding row instance
      */
-    private static ArrayList<String> readCsvToStrList(String path) {
+    public static ArrayList<Row> toArrayList(String path) {
 
-        File satisfactoryCSV = new File(path);
-        ArrayList<String> stringRows = new ArrayList<>();
+        File csvFile = new File(path);
+        ArrayList<Row> rows = new ArrayList<>();
 
         try {
-            Scanner csvReadScanner = new Scanner(satisfactoryCSV); // Scanner can be used to iterate over every row of a
+            Scanner csvReadScanner = new Scanner(csvFile); // Scanner can be used to iterate over every row of a
                                                                    // CSV file
+            csvReadScanner.nextLine(); //skip header line
             while (csvReadScanner.hasNext()) {
                 String row = csvReadScanner.nextLine(); // use nextLine if you want to catch "empty" values
-                stringRows.add(row);
+                rows.add(createRow(row));
             }
             csvReadScanner.close();
         } catch (FileNotFoundException e) {
             System.out.println(e.toString());
         }
-        return stringRows;
-    }
-
-    /* Converts the given CSV file to an ArrayList<Row> holding all the CSV rows */
-    public static ArrayList<Row> csvToList(String path) {
-
-        ArrayList<String> rowStrList = ReadCSV.readCsvToStrList(path);
-        ArrayList<Row> rowList = new ArrayList<>();
-
-        if (!rowStrList.isEmpty()) {
-            rowStrList.remove(0); // removes the head of the CSV
-
-            for (String rowStr : rowStrList) {
-                rowList.add(ReadCSV.createRow(rowStr));
-            }
-        }
-        return rowList;
+        return rows;
     }
 
     private static Row createRow(String rowStr) {
