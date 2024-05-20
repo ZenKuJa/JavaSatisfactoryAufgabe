@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sorter {
+public class AggregateSorter {
     public static void mergeSort(ArrayList<Row> rows){
         int length = rows.size();
         if (length < 2){
@@ -33,11 +33,11 @@ public class Sorter {
                 rows.set(i, leftSide.get(leftIndex));
                 leftIndex += 1;
                 continue;
-            } else if (leftSide.get(leftIndex).RatePerMinOut1 >= rightSide.get(rightIndex).RatePerMinOut1){
+            } else if (0 >= leftSide.get(leftIndex).Recipe.compareTo(rightSide.get(rightIndex).Recipe)){
                 rows.set(i, leftSide.get(leftIndex));
                 leftIndex += 1;
                 continue;
-            } else if (leftSide.get(leftIndex).RatePerMinOut1 <= rightSide.get(rightIndex).RatePerMinOut1){
+            } else if (0 < leftSide.get(leftIndex).Recipe.compareTo(rightSide.get(rightIndex).Recipe)){
                 rows.set(i, rightSide.get(rightIndex));
                 rightIndex += 1;
                 continue;
