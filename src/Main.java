@@ -7,11 +7,18 @@ public class Main {
         System.out.println("***********************************");
         System.out.println("Unsorted");
         System.out.println("***********************************");
+
         ArrayList<Row> csvRows = ReadCSV.toArrayList(csvPath);
         for (Row myRow : csvRows) {
             System.out.println(myRow.Recipe + " " + myRow.RatePerMinOut1);
         }
         System.out.println(csvRows.size());
+
+        System.out.println("***********************************");
+        System.out.println("Sorted by HashMap");
+        System.out.println("***********************************");
+
+        csvRows = AggegatorHashMap.aggregate(csvRows);
 
 
         System.out.println("***********************************");
@@ -23,19 +30,5 @@ public class Main {
             System.out.println(myRow.Recipe + " " + myRow.RatePerMinOut1);
         }
         System.out.println(csvRows.size());
-
-
-        System.out.println("***********************************");
-        System.out.println("Sorted by Name");
-        System.out.println("***********************************");
-
-        AggregateSorter.mergeSort(csvRows);
-        for (Row myRow : csvRows) {
-            System.out.println(myRow.Recipe + " " + myRow.RatePerMinOut1);
-        }
-        System.out.println(csvRows.size());
-
-        Aggregator.aggregate(csvRows);
-
     }
 }
