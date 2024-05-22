@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class ReadCSV {
 
-    /*goes over every line of the csv file and creates for every line the corespoinding row instance
-     */
+    /**goes over every line of the csv file and creates for every line the corespoinding row instance
+     **/
     public static ArrayList<Row> toArrayList(String path) {
 
         File csvFile = new File(path);
