@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Sorter {
-    public static void mergeSort(ArrayList<Row> rows){
+    public static void sort(ArrayList<Row> rows){
         int length = rows.size();
         if (length < 2){
             return;
@@ -16,8 +16,8 @@ public class Sorter {
                 rightSide.add(rows.get(i));
             }
         }
-        mergeSort(leftSide);
-        mergeSort(rightSide);
+        sort(leftSide);
+        sort(rightSide);
         merge(rows, leftSide, rightSide);
     }
 
