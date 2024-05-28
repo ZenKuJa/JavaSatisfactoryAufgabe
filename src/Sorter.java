@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Sorter {
-    /** Sortiert die gegebene ArrayList"<Row>" absteigend nach der
+    /** Sortiert die gegebene ArrayList<Row> absteigend nach der
     RatePerMinOut1 eines jeden Rezeptes **/
     public static void sort(ArrayList<Row> rows){
         int length = rows.size();

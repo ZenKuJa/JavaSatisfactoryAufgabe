@@ -6,7 +6,7 @@ public class Main {
 
         ArrayList<Row> csvRows = ReadCSV.toArrayList(csvPath);
         csvRows = Aggregator.aggregate(csvRows);
-        Sorter.mergeSort(csvRows);
+        Sorter.sort(csvRows);
 
         for (Row myRow : csvRows) {
             System.out.println(myRow.Recipe + " " + myRow.RatePerMinOut1);
