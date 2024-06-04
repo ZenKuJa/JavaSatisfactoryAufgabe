@@ -5,7 +5,8 @@ import java.util.Map;
 public class Aggregator {
 
     /** Erzeugt ArrayList<Row> mit Rezept-Varianten mit höchster
-     * RatePerMinOut1 für jedes Item**/
+     * RatePerMinOut1 für jedes Item
+     * @param rows zu sortierende Datei**/
     public static ArrayList<Row> aggregate(ArrayList<Row> rows) {
 
         ArrayList<Row> aggregatedRows = new ArrayList<>();
